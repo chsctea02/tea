@@ -1,3 +1,4 @@
+
 /* 基本設定 */
 html {
     scroll-behavior: smooth;
@@ -115,10 +116,18 @@ body {
     height: auto;
 }
 
+.intro{
+    width: 55%;
+    color: #DCCCAB;
+    font-size: 20px;
+    font-family: 'jf-openhuninn', sans-serif;
+    line-height: 1.0;
+}
+
 /* 產品 */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     width: 100%;
     max-width: 900px;
