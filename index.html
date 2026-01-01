@@ -126,11 +126,10 @@
             const carousel = document.getElementById('productCarousel');
             const prevBtn = document.querySelector('.nav.prev');
             const nextBtn = document.querySelector('.nav.next');
-
-            const gap = 20;
+            
             function getCardWidth() {
                 const card = carousel.querySelector('.product-card');
-                return card.offsetWidth + gap;
+                return card.offsetWidth + 20; // 20 = gap
             }
 
             let autoPlayTimer;
@@ -150,11 +149,17 @@
 
             /* ---------- 按鈕控制 ---------- */
             nextBtn.addEventListener('click', () => {
-                carousel.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+               carousel.scrollBy({
+                    left: getCardWidth(),
+                    behavior: 'smooth'
+                });
             });
 
             prevBtn.addEventListener('click', () => {
-                carousel.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+                carousel.scrollBy({
+                    left: getCardWidth(),
+                    behavior: 'smooth'
+                });
             });
 
             /* ---------- Hover / Touch 暫停 ---------- */
@@ -170,5 +175,6 @@
 </body>
 
 </html>
+
 
 
