@@ -141,19 +141,6 @@
                 carousel.appendChild(card.cloneNode(true));
             });
 
-            /* ---------- 自動播放 ---------- */
-            function startAutoPlay() {
-                autoPlayTimer = setInterval(() => {
-                    carousel.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
-                }, 3000);
-            }
-
-            function stopAutoPlay() {
-                clearInterval(autoPlayTimer);
-            }
-
-            startAutoPlay();
-
             /* ---------- 無限循環核心 ---------- */
             carousel.addEventListener('scroll', () => {
                 if (carousel.scrollLeft >= carousel.scrollWidth / 2) {
@@ -183,4 +170,5 @@
 </body>
 
 </html>
+
 
